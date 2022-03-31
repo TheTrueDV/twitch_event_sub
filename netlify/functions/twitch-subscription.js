@@ -1,4 +1,4 @@
-exports.handler = async (event) => {
+export async function handler(event) {
 	const {headers = [] } = event;
 
 	const type = headers['twitch-eventsub-message-type'] || 'no type';
@@ -10,4 +10,4 @@ exports.handler = async (event) => {
 			message: 'ok'
 		}),
 	};
-};
+}
